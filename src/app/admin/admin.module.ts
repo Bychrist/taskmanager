@@ -4,6 +4,8 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutComponent } from './about/about.component';
 import { MyProfileComponent } from './my-profile/my-profile.component';
 import { DashboardService} from  '../dashboard.service';
+import { ProjectsComponent } from './projects/projects.component';
+import {FormsModule} from '@angular/forms';
 
 
 
@@ -11,12 +13,13 @@ import { DashboardService} from  '../dashboard.service';
   declarations: [
     DashboardComponent,
     AboutComponent,
-    MyProfileComponent
+    MyProfileComponent,
+    ProjectsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule, FormsModule
   ],
-  exports:[DashboardComponent,AboutComponent,MyProfileComponent],
+  exports:[DashboardComponent,AboutComponent,MyProfileComponent,   ProjectsComponent],
   providers:[DashboardService]//adding the service to the module is done on the providers
 })
 export class AdminModule { }
